@@ -4,8 +4,6 @@ title: Acerca de
 permalink: /about/
 ---
 
-#### OdnetninI
-
 Me llamo Eduardo (aka. OdnetninI), actualmente de 20-21 años (si ya sé, he escrito un rango de años, ¿y?).
 
 Actualmente soy estudiante de Ingeniería Informática, cursando en este instante 4º, y no sé como me irá de tiempo con el TFG encima :S.
@@ -16,12 +14,12 @@ Tengo un canal de [Youtube](http://youtube.com/OdnetninI) y uno de [Twitch](http
 
 #### Especificaciones ordenadores:
 
-Pieza            | |Torre                         | |Portatil
-----------       | |-------------                 | |--------------
-Procesador       | |Intel i5 4460                 | |Intel i7 4500U
-Ram              | |8GiB DDR3 1600                | |8GiB DDR3L 1600
-Gráfica          | |GTX 650 + GT 610              | |GTX 840M
-Monitores        | |HP 18.5", Samsung 22", LG 15" | |Integrada 15.6"
-Almacenamiento   | |HDD 1TB, HDD 1TB, HDD 2TB     | |HDD 1TB, HDD 500GB, SSD 24GB
-Sistema Operativo| |Antergos Arch GNU/Linux       | |Manjaro Arch GNU/Linux
+Pieza            |Torre                         |Portatil
+----------       |-------------                 |--------------
+Procesador       |Intel i5 4460                 |Intel i7 4500U
+Ram              |8GiB DDR3 1600                |8GiB DDR3L 1600
+Gráfica          |GTX 650 + GT 610              |GTX 840M
+Monitores        |HP 18.5", Samsung 22", LG 15" |Integrada 15.6"
+Almacenamiento   |HDD 1TB, HDD 1TB, HDD 2TB     |HDD 1TB, HDD 500GB, SSD 24GB
+Sistema Operativo|Antergos Arch GNU/Linux       |Manjaro Arch GNU/Linux
 
