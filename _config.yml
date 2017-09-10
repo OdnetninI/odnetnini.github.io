@@ -14,6 +14,8 @@ markdown: kramdown
 simple_search: http://google.com/search
 permalink: /blog/:year/:month/:day/:title/
 
+include: [".well-known"]
+
 highlighter: rouge
 plugins:
   - jekyll-feed
