@@ -6,7 +6,7 @@ permalink: /about/
 
 Me llamo Eduardo (aka. OdnetninI), actualmente de 20-21 años (si ya sé, he escrito un rango de años, ¿y?).
 
-Actualmente soy estudiante de Ingeniería Informática, cursando en este instante 4º, y no sé como me irá de tiempo con el TFG encima :S.
+Actualmente soy estudiante de Ingeniería Informática en la Universidad de Murcia, cursando en este instante 4º, y no sé como me irá de tiempo con el TFG encima :S.
 
 Soy un gran fanático de la filosofía Free/Libre Software, casi únicamente uso Arch GNU/Linux, pero por facilidad en mi torre fue instalado usando antegos, y en el portatil usando Manjaro (aunque la he reconvertido a arch).
 
