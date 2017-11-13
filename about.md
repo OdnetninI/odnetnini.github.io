@@ -8,7 +8,7 @@ Me llamo Eduardo (aka. OdnetninI), actualmente de 20-21 años (si ya sé, he esc
 
 Actualmente soy estudiante de Ingeniería Informática en la Universidad de Murcia, cursando en este instante 4º, y no sé como me irá de tiempo con el TFG encima :S.
 
-Soy un gran fanático de la filosofía Free/Libre Software, casi únicamente uso Arch GNU/Linux, pero por facilidad en mi torre fue instalado usando antegos, y en el portatil usando Manjaro (aunque la he reconvertido a arch).
+Soy un gran fanático de la filosofía Free/Libre Software, casi únicamente uso Arch GNU/Linux, pero por facilidad en mi torre fue instalado usando Antergos, y en el portatil usando Manjaro (aunque la he reconvertido a arch).
 
 Tengo un canal de [Youtube](http://youtube.com/OdnetninI) y uno de [Twitch](http://twitch.com/OdnetninI) donde creo videos y directos de lo que me va apeteciendo, no sigo ningún horario (aunque querría) ni ninguna regla (probablemente por eso esté un poco estancado :S).
 
