@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eduardo José Gómez Hernández</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">    
+    <meta charset="UTF-8">
+
+
+    <style>
+       .menu ul {
+	   list-style-type: none;
+	   margin: 0;
+	   padding: 0;
+	   overflow: hidden;
+	   background-color: #333;
+	   position: -webkit-sticky; /* Safari */
+	   position: sticky;
+	   width: 100%;
+       }
+
+       .menu li {
+	   float: left;
+	   border-right: 1px solid #bbb;
+       }
+       
+       .menu li:last-child {
+	   border-right: none;
+       }
+       
+       .menu a {
+	   display: block;
+	   color: white;
+	   text-align: center;
+	   padding: 14px 16px;
+	   text-decoration: none;
+       }
+
+       .menu li a:hover {
+	   background-color: #111;
+       }
+
+       .menu li .active {
+	   background-color: #4CAF50;
+       }
+
+       header h1 {
+	   margin: 1em 0 0.5em 0;
+	   color: #343434;
+	   font-weight: normal;
+	   font-family: 'Ultra', sans-serif;   
+	   font-size: 36px;
+	   line-height: 42px;
+	   text-transform: uppercase;
+	   text-shadow: 0 2px white, 0 3px #777;
+       }
+
+       .note {
+	   position: relative;
+	   padding: 1em 1.5em;
+	   margin: 2em auto;
+	   color: #fff;
+	   background: #97C02F;
+	   overflow: hidden;
+	   margin: 1em;
+       }
+
+       .note:before {
+	   content: "";
+	   position: absolute;
+	   top: 0;
+	   right: 0;
+	   border-width: 0 16px 16px 0;
+	   border-style: solid;
+	   border-color: #fff #fff #658E15 #658E15;
+	   background: #658E15;
+	   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+	   -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+	   box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+	   /* Firefox 3.0 damage limitation */
+	   display: block; width: 0;
+       }
+
+       .note.rounded {
+	   -moz-border-radius: 5px 0 5px 5px;
+	   border-radius: 5px 0 5px 5px;
+       }
+
+       .note.rounded:before {
+	   border-width: 8px;
+	   border-color: #fff #fff transparent transparent;
+	   -moz-border-radius: 0 0 0 5px;
+	   border-radius: 0 0 0 5px;
+       }
+
+       .note header {
+	   font-size: 175%;
+	   text-decoration: underline;
+       }
+       img.profile {
+	   border-radius: 30%;
+	   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+	   -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+	   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+       }
+
+       ul li a img {height: 1.5em;}
+    </style>
+    
+  </head>
+  <body>
+
+    <header>
+      <h1>Eduardo José Gómez Hernández</h1>
+      <nav class="menu">
+	<ul>
+	  <li><a href="index.html">Biography</a></li>
+	  <li><a class="active" href="#">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+	  <li><a href="tools.html">Tools</a></li>
+	  <li><a href="news.html">News</a></li>
+	</ul>
+      </nav>
+    </header>
+
+    <br>
+    
+    <div class="container">
+      I am a PhD Student at the University of Murcia (Spain) and at the University of Uppsala (Sweden) under a joint PhD agreement. My research started with Neural Networks and HPC. As my interests are more related to computer architecture, my current research is on x86-like architectures.
+
+      <br>
+      <br>
+      <a href="https://dblp1.uni-trier.de/pers/hd/g/G=oacute=mez=Hern=aacute=ndez:Eduardo_Jos=eacute=" target="_blank"> Eduardo José Gómez-Hernández at DBLP Bibliography Server</a>
+      <br>
+      <a href="https://scholar.google.es/citations?user=M4KaGDMAAAAJ" target="_blank"> Eduardo José Gómez-Hernández at Google Scholar</a>
+      <br>
+      <a href="https://orcid.org/0000-0001-8445-615X" target="_blank"> Eduardo José Gómez-Hernández ORCiD</a>
+      <br>
+      <a href="https://www.researchgate.net/profile/Eduardo_Gomez_Hernandez" target="_blank"> Eduardo José Gómez-Hernández at Research Gate</a>
+    </div>
+    <h1>Papers</h1>
+    <h2>2021</h2>
+    <ul>
+      <li>Eduardo José Gómez-Hernández, Juan M. Cebrian, Rubén Titos-Gil, Stefanos Kaxiras, Alberto Ros, "Efficient, Distributed, and Non-Speculative Multi-Address Atomic Operations". 54th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO-54) <a href="Papers/micro21.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a><a href="Papers/micro21.bib" target="_blank"><img src="img/bibtex.png" alt="[BibTeX]" /></a></li>
+      <li>Eduardo José Gómez-Hernández, Ruixian Shao, Christos Sakalis, Stefanos Kaxiras, Alberto Ros, "Splash-4: Improving Scalability with Lock-Free Constructs". 2021 IEEE International Symposium on Performance Analysis of System and Software (ISPASS) <a href="Posters/ISPASS21.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a>(Abstract: <a href="Posters/ISPASS21_Abstract.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a>)<!--<a href="#" target="_blank"><img src="img/bibtex.png" alt="[BibTeX]" /></a>--></li>
+    </ul>
+    
+    <h2>2020</h2>
+    <ul>
+      <li>Eduardo José Gómez-Hernández, Pablo Martínez, Biagio Peccerillo, Sandro Bartolini, José Manuel García, Gregorio Bernabé, "Using PHAST to port Caffe library: First experiences and lessons learned". 13th International Workshop on Programmability and Architectures for Heterogeneous Multicores <a href="Papers/MultiProg20.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a><a href="https://arxiv.org/abs/2005.13076" target="_blank"><img src="img/arXiv.gif" alt="https://arxiv.org/abs/2005.13076" /></a><a href="Papers/MultiProg20.bib" target="_blank"><img src="img/bibtex.png" alt="[BibTeX]" /></a></li>
+    </ul>
+
+    <h2>2019</h2>
+    <ul>
+      <li>Eduardo José Gómez-Hernández, José Manuel García, "First Experiences on Applying Deep Learning Techniques to Prostate Cancer Detection". International Conference on Parallel Computing and High Performance Computing (PARCO2019) <a href="Papers/Parco19.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a><a href="Papers/Parco19.bib" target="_blank"><img src="img/bibtex.png" alt="[BibTeX]" /></a></li>
+      <li>Eduardo José Gómez-Hernández, José Manuel García, "Preparing and managing an HPC Cluster: Lessons learned". Jornadas de Paralelismo 2019 (Sarteco) <a href="Papers/JP19.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a><a href="#" target="_blank"><img src="img/bibtex.png" alt="[BibTeX]" /></a></li>
+    </ul>
+
+    <h1>Posters</h1>
+    <h2>2021</h2>
+    <ul>
+      <li>Eduardo José Gómez-Hernández, Juan M. Cebrian, Rubén Titos-Gil, Stefanos Kaxiras, Alberto Ros, "Efficient, Distributed, and Non-Speculative Multi-Address Atomic Operations". 2021 ACM Europe Summer School on “HPC Computer Architectures for AI and Dedicated Applications" <a href="Posters/ACM21.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a></li>
+    </ul>
+    <h2>2020</h2>
+    <ul>
+      <li>Eduardo José Gómez-Hernández, "Efficient lock elision in TSO". 16th International Summer School on Advanced Computer Architecture and Compilation for High-performance Embedded Systems <a href="Posters/ACACES20.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a>(Abstract: <a href="Posters/ACACES20_Abstract.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a>)<!--<a href="#" target="_blank"><img src="img/bibtex.png" alt="[BibTeX]" /></a>--></li>
+    </ul>
+    <h2>2019</h2>
+    <ul>
+      <li>Eduardo José Gómez-Hernández, José Manuel García, "Recoding the Caffe Framework using the Performance Portability Philosophy". PUMPS+AI Summer School 2019 <a href="Posters/PUMPS19.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a><!--<a href="#" target="_blank"><img src="img/bibtex.png" alt="[BibTeX]" /></a>--></li>
+    </ul>
+    
+    <h1>Thesis</h1>
+    <h2>Master</h2>
+    <ul>
+      <li>Eduardo José Gómez-Hernández, José Manuel García, "Towards a unified programming model for diverse computing architectures: Experiences using PHAST". University of Murcia Master's Thesis <a href="Thesis/TFM.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a>(Presentation: <a href="Thesis/TFM_Beamer.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a>)</li>
+    </ul>
+    <h2>Bachelor</h2>
+    <ul>
+      <li>Eduardo José Gómez-Hernández, José Manuel García, "Aplicación de técnicas de Deep Learning usando el framework MXNet en un caso médico real". University of Murcia Bachelor's Thesis <a href="Thesis/TFG.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a>(Presentation: <a href="Thesis/TFG_Beamer.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a>)</li>
+    </ul>
+    
+  </body>
+</html>
