@@ -9,104 +9,104 @@
 
 
     <style>
-       .menu ul {
-	   list-style-type: none;
-	   margin: 0;
-	   padding: 0;
-	   overflow: hidden;
-	   background-color: #333;
-	   position: -webkit-sticky; /* Safari */
-	   position: sticky;
-	   width: 100%;
-       }
+      .menu ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333;
+	  position: -webkit-sticky; /* Safari */
+	  position: sticky;
+	  width: 100%;
+      }
 
-       .menu li {
-	   float: left;
-	   border-right: 1px solid #bbb;
-       }
-       
-       .menu li:last-child {
-	   border-right: none;
-       }
-       
-       .menu a {
-	   display: block;
-	   color: white;
-	   text-align: center;
-	   padding: 14px 16px;
-	   text-decoration: none;
-       }
+      .menu li {
+	  float: left;
+	  border-right: 1px solid #bbb;
+      }
+      
+      .menu li:last-child {
+	  border-right: none;
+      }
+      
+      .menu a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+      }
 
-       .menu li a:hover {
-	   background-color: #111;
-       }
+      .menu li a:hover {
+	  background-color: #111;
+      }
 
-       .menu li .active {
-	   background-color: #4CAF40;
-       }
+      .menu li .active {
+	  background-color: #4CAF40;
+      }
 
-       header h1 {
-	   margin: 1em 0 0.5em 0;
-	   color: #343434;
-	   font-weight: normal;
-	   font-family: 'Ultra', sans-serif;   
-	   font-size: 36px;
-	   line-height: 42px;
-	   text-transform: uppercase;
-	   text-shadow: 0 2px white, 0 3px #777;
-       }
+      header h1 {
+	  margin: 1em 0 0.5em 0;
+	  color: #343434;
+	  font-weight: normal;
+	  font-family: 'Ultra', sans-serif;   
+	  font-size: 36px;
+	  line-height: 42px;
+	  text-transform: uppercase;
+	  text-shadow: 0 2px white, 0 3px #777;
+      }
 
-       .note {
-	   position: relative;
-	   padding: 1em 1.5em;
-	   margin: 2em auto;
-	   color: #fff;
-	   background: #57900F;
-	   overflow: hidden;
-	   margin: 1em;
-       }
+      .note {
+	  position: relative;
+	  padding: 1em 1.5em;
+	  margin: 2em auto;
+	  color: #fff;
+	  background: #57900F;
+	  overflow: hidden;
+	  margin: 0.4em;
+      }
 
-       .note:before {
-	   content: "";
-	   position: absolute;
-	   top: 0;
-	   right: 0;
-	   border-width: 0 16px 16px 0;
-	   border-style: solid;
-	   border-color: #fff #fff #658E15 #658E15;
-	   background: #658E15;
-	   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
-	   -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
-	   box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
-	   /* Firefox 3.0 damage limitation */
-	   display: block; width: 0;
-       }
+      .note:before {
+	  content: "";
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  border-width: 0 16px 16px 0;
+	  border-style: solid;
+	  border-color: #fff #fff #658E15 #658E15;
+	  background: #658E15;
+	  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+	  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+	  box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+	  /* Firefox 3.0 damage limitation */
+	  display: block; width: 0;
+      }
 
-       .note.rounded {
-	   -moz-border-radius: 5px 0 5px 5px;
-	   border-radius: 5px 0 5px 5px;
-       }
+      .note.rounded {
+	  -moz-border-radius: 5px 0 5px 5px;
+	  border-radius: 5px 0 5px 5px;
+      }
 
-       .note.rounded:before {
-	   border-width: 8px;
-	   border-color: #fff #fff transparent transparent;
-	   -moz-border-radius: 0 0 0 5px;
-	   border-radius: 0 0 0 5px;
-       }
+      .note.rounded:before {
+	  border-width: 8px;
+	  border-color: #fff #fff transparent transparent;
+	  -moz-border-radius: 0 0 0 5px;
+	  border-radius: 0 0 0 5px;
+      }
 
-       .note header {
-	   font-size: 175%;
-	   text-decoration: underline;
-       }
-       img.profile {
-	   border-radius: 30%;
-	   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-	   -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-	   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-       }
-       
-       ul li a img {height: 1.5em;}
-       a img {height: 1.5em;}
+      .note header {
+	  font-size: 175%;
+	  text-decoration: underline;
+      }
+      img.profile {
+	  border-radius: 30%;
+	  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+	  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+	  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+      }
+      
+      ul li a img {height: 1.5em;}
+      a img {height: 1.5em;}
     </style>
     
   </head>
@@ -118,7 +118,7 @@
 	<ul>
 	  <li><a class="active" href="#">Biography</a></li>
 	  <li><a href="research.html">Research</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
+	  <li><a href="teaching.html">Teaching</a></li>
 	  <li><a href="tools.html">Tools</a></li>
 	  <li><a href="news.html">News</a></li>
 	</ul>
@@ -126,41 +126,98 @@
     </header>
 
     <div class="container">
-		<div style="margin: 1em; float: left;">
-			<section>
-			<img class="profile" src="img/me.jpeg" />
-			</section>
-			<div class="note" style="float: left;">
-				<header>Social</header>
-				<section>
-					<a href="https://www.linkedin.com/in/eduardo-jos%C3%A9-g%C3%B3mez-hern%C3%A1ndez/" target="_blank"><img src="img/ln.png" alt="LinkedIn" /></a>
-					<a href="https://github.com/OdnetninI" target="_blank"><img src="img/github.png" alt="Github" /></a>
-					<a href="https://gitlab.com/OdnetninI" target="_blank"><img src="img/gitlab.png" alt="Gitlab" /></a>
-				</section>
-			</div>
-		</div>
-	</div>
-      <div class="note" style="float: left;">
-	<header>About Me!</header>
+      <div style="margin: 1em; float: left;">
 	<section>
-	  <ul style="list-style: none;">
-	    <li><b>Contact: eduardojose.gomez at um dot es</b></li>
-	    <br>
-	    <li>Ph.D. Student in Computer Architecture</li>
-	    <br>
-	    <li>Computer Architecture and Parallel Systems Group</li>
-	    <li>Computer Engineering Department</li>
-	    <li>University of Murcia</li>
-	    <li>Spain</li>
-	    <br>
-	    <li>Uppsala Architecture Research Team</li>
-	    <li>Department of Information Technology</li>
-	    <li>Uppsala Universitet</li>
-	    <li>Sweden</li>
-	  </ul>
+	  <img class="profile" src="img/me.jpeg" />
 	</section>
+	<div class="note" style="float: left;">
+	  <section>
+	    <a href="https://www.linkedin.com/in/eduardo-jos%C3%A9-g%C3%B3mez-hern%C3%A1ndez/" target="_blank"><img src="img/ln.png" alt="LinkedIn" /></a>
+	    <a href="https://github.com/OdnetninI" target="_blank"><img src="img/github.png" alt="Github" /></a>
+	    <a href="https://gitlab.com/OdnetninI" target="_blank"><img src="img/gitlab.png" alt="Gitlab" /></a>
+	  </section>
+	</div>
       </div>
     </div>
     
+    <div class="note" style="float: left;">
+      <header>About Me!</header>
+      <section>
+	<ul style="list-style: none;">
+	  <li><b>Contact: eduardojose.gomez at um dot es</b></li>
+	  <br>
+	  <li>Joint Ph.D. Student in Computer Architecture</li>
+	  <br>
+	  <li><b>Directors:</b></li>
+	  <li>Alberto Ros Bardisa (University of Murcia)</li>
+	  <li>Stefanos Kaxiras (Uppsala Universitet)</li>
+	  <br>
+	  <li>Computer Architecture and Parallel Systems Group</li>
+	  <li>Computer Engineering Department</li>
+	  <li>University of Murcia, Spain</li>
+	  <br>
+	  <li>Uppsala Architecture Research Team</li>
+	  <li>Department of Information Technology</li>
+	  <li>Uppsala Universitet, Sweden</li>
+	</ul>
+      </section>
+    </div>
+
+    <div class="note" style="float: left; max-width: 30em;">
+      <header>Bio!</header>
+      <section>
+	I am a four-year Ph.D. Student in the Computer Engineering Department, University of Murcia (Spain), under a joint-PhD agreement with the University of Uppsala (Sweden).
+	<br>
+	<br>
+	My research interests include computer architecture, cache coherence, memory hierarchy, and multi-processor/multi-core architectures.
+	<br>
+	<br>
+	I completed a BSc in Computer Engineering and an MSc in New Technologies in Computer Science, both specializing in computer architecture and high-performance computing, at the University of Murcia.
+	<br>
+	<br>
+	During my university career, I have administrated multiple computer clusters used by research groups, worked in team, and teached several subjects.
+	<br>
+	<br>
+	I have experience with multiple up-to-date tools and systems (not only for research).
+	<br>
+	<br>
+      </section>
+    </div>
+
+    <div class="note" style="float: left; max-width: 30em;">
+      <header>Oddities</header>
+      <section>
+	<ul style="list-style: none;">
+	  <li>GNU/Linux enjoyer (even for gaming)</li>
+	  <li>Admin of a Technical Minecraft Server (TechCraft ESP)</li>
+	  <li>Retro-Tech :)</li>
+	  <li>Anime and Manga enjoyer (Mahou Shoujo lover)</li>
+	  <li>PC and Console Gamer</li>
+	  <li>Plushie lover <3 </li>
+	  <li>There are so many topics... I cannot fit here!!!</li>
+	</ul>
+      </section>
+    </div>
+
+    <div class="note" style="float: left; max-width: 30em;">
+      <header>The ZZAZZGlitch's April Fools Event</header>
+      <section>
+	  <ul style="list-style: none;">
+	    <li>The ZZAZZGlitch's April Fools Event is a hacking event organized by the Youtuber "ZZAZZGlitch".</li>
+	    <br>
+	    <li>The event is usually run on Gameboy or Gameboy Advance with some unmodified Pokemon ROM and a custom Save file. It includes the understanding of several topics: Reverse Engineering, Networking, Assembly (LR35902, ARM), Quick prototyping, among many others. </li>
+	    <br>
+	    <li><b>Year -> Position</b></li>
+	    <li>2017 -> 66</li>
+	    <li>2018 -> 1</li>
+	    <li>2019 -> 10</li>
+	    <li>2020 -> Event Cancelled</li>
+	    <li>2021 -> 6</li>
+	    <li>2022 -> 1</li>
+	  </ul>
+	</ul>
+      </section>
+    </div>
+
   </body>
 </html>
