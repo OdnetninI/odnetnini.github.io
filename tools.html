@@ -104,9 +104,17 @@
 	   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
        }
        
-       ul li a img {height: 1.5em;}
-       
-       p img {height: 1.5em}
+       ul li a img {height: 1em;}
+
+       #hr-main {
+	   border: 3px solid #f9c7fc;
+	   border-radius: 5px;
+       }
+
+       #hr-sub {
+	   border: 1px solid #f9c7fc;
+	   border-radius: 5px;
+       }
     </style>
     
   </head>
@@ -128,20 +136,46 @@
       </nav>
     </header>
 
-    <div class="container">      
-      <h1>Splash-4</h1>
+    <div class="container">
 
-	 <p>
-      Over the past three decades, the parallel applications of the Splash-2 benchmark suite have been instrumental in advancing multiprocessor research. Recently, the Splash-3 benchmarks eliminated performance bugs, data races, and improper synchronization that plagued Splash-2 benchmarks after the definition of the C memory model. In Splash-4 ,we revisit the Splash-3 benchmarks and adapt them for contemporary architectures with atomic operations and lock-free constructs. With our changes, we improve the scalability of most benchmarks for up to 32 and 64 cores, showing an improvement of up to 9x in actual machines, and up to 5x in simulation, over the unmodified Splash-3 benchmarks. To denote the substantive nature of the improvements in the Splash-3 benchmarks.
+      <p>Here are all the tools that I think are mature enough to be used by anyone.
+      They are classified in <a href="#researchtools">Research Tools</a> and <a href="#othertools">Other Tools</a>.</p>
+
+      <div id="researchtools">
+	<h1>Research Tools</h1>
+
+	<p>Tools made with research in mind, or as a consequence of it.</p>
+
+	<hr id="hr-sub">
+	
+	<h2>Splash-4</h2>
+
+	<p>Over the past three decades, the parallel applications of the Splash-2 benchmark suite have been instrumental in advancing multiprocessor research. Recently, the Splash-3 benchmarks eliminated performance bugs, data races, and improper synchronization that plagued Splash-2 benchmarks after the definition of the C memory model. In Splash-4 ,we revisit the Splash-3 benchmarks and adapt them for contemporary architectures with atomic operations and lock-free constructs. With our changes, we improve the scalability of most benchmarks for up to 32 and 64 cores, showing an improvement of up to 9x in actual machines, and up to 5x in simulation, over the unmodified Splash-3 benchmarks. To denote the substantive nature of the improvements in the Splash-3 benchmarks.</p>
+	<ul>
+	  <li>Eduardo José Gómez-Hernández, Juan M. Cebrian, Stefanos Kaxiras, Alberto Ros, "Splash-4: A Modern Benchmark Suite with Lock-Free Constructs". 2022 IEEE International Symposium on Workload Characterization (IISWC 2022)<a href="Papers/iiswc22.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a></li>
+	  <br>
+	  <li>Eduardo José Gómez-Hernández, Ruixiang Shao, Christos Sakalis, Stefanos Kaxiras, Alberto Ros, "Splash-4: Improving Scalability with Lock-Free Constructs". International Symposium on Performance Analysis of Systems and Software (ISPASS), pages 235--236, Worldwide event, March 2021.<a href="Posters/ISPASS21_Abstract.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a></li>
+	  </ul>
+	  Link to <a href="https://github.com/OdnetninI/Splash-4" target="_blank">Splash-4</a>
+      </div>
+
       <br>
-      <br>
-      Eduardo José Gómez-Hernández, Juan M. Cebrian, Stefanos Kaxiras, Alberto Ros, "Splash-4: A Modern Benchmark Suite with Lock-Free Constructs". 2022 IEEE International Symposium on Workload Characterization (IISWC 2022)<a href="Papers/iiswc22.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a>
-      <br>
-      Eduardo José Gómez-Hernández, Ruixiang Shao, Christos Sakalis, Stefanos Kaxiras, Alberto Ros, "Splash-4: Improving Scalability with Lock-Free Constructs". International Symposium on Performance Analysis of Systems and Software (ISPASS), pages 235--236, Worldwide event, March 2021.<a href="Posters/ISPASS21_Abstract.pdf" target="_blank"><img src="img/pdf.svg" alt="[PDF]" /></a>
-      <br>
-      <br>
-      Link to <a href="https://github.com/OdnetninI/Splash-4" target="_blank">Splash-4</a>
-	  </p>
+      <hr id="hr-main">
+
+      <div id="othertools">
+	<h1>Other Tools</h1>
+
+	<p>Tools developed for fun, or without research purposes.</p>
+
+	<hr id="hr-sub">
+	
+	<h2>TheZZAZZGlitch's April Fools Event 2023 server</h2>
+	<p>A reimplementation of TheZZAZZGlitch's April Fools Event 2023 server.
+	<br>
+	Every year, the Youtuber "TheZZAZZGlitch" creates a challenge named TheZZAZZGlitch's April Fools Event. However, this year was special, they did not have enough time to prepare a full challenge so they did an more Capture The Flag challenge (CTF). Well, after the challenge finished, we were waiting for zzazz to release the source code of the challenge, like they usually do. But there was no luck, only the leaderboard got released. So, I did my own. I have implemented 99% of the challenge.</p>
+	Link to <a href="https://github.com/OdnetninI/zzazz-2023-server" target="_blank">source code</a>
+      </div>
+
     </div>
     
   </body>
