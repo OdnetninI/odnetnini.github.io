@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eduardo José Gómez Hernández</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">    
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://www.edujgh.net/news.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+       .menu ul {
+	   list-style-type: none;
+	   margin: 0;
+	   padding: 0;
+	   overflow: hidden;
+	   background-color: #333;
+	   position: -webkit-sticky; /* Safari */
+	   position: sticky;
+	   width: 100%;
+       }
+
+       .menu li {
+	   float: left;
+	   border-right: 1px solid #bbb;
+       }
+       
+       .menu li:last-child {
+	   border-right: none;
+       }
+       
+       .menu a {
+	   display: block;
+	   color: white;
+	   text-align: center;
+	   padding: 14px 16px;
+	   text-decoration: none;
+       }
+
+       .menu li a:hover {
+	   background-color: #111;
+       }
+
+       .menu li .active {
+	   background-color: #4CAF50;
+       }
+
+       header h1 {
+	   margin: 1em 0 0.5em 0;
+	   color: #343434;
+	   font-weight: normal;
+	   font-family: 'Ultra', sans-serif;   
+	   font-size: 36px;
+	   line-height: 42px;
+	   text-transform: uppercase;
+	   text-shadow: 0 2px white, 0 3px #777;
+       }
+
+       .note {
+	   position: relative;
+	   padding: 1em 1.5em;
+	   margin: 2em auto;
+	   color: #fff;
+	   background: #97C02F;
+	   overflow: hidden;
+	   margin: 1em;
+       }
+
+       .note:before {
+	   content: "";
+	   position: absolute;
+	   top: 0;
+	   right: 0;
+	   border-width: 0 16px 16px 0;
+	   border-style: solid;
+	   border-color: #fff #fff #658E15 #658E15;
+	   background: #658E15;
+	   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+	   -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+	   box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+	   /* Firefox 3.0 damage limitation */
+	   display: block; width: 0;
+       }
+
+       .note.rounded {
+	   -moz-border-radius: 5px 0 5px 5px;
+	   border-radius: 5px 0 5px 5px;
+       }
+
+       .note.rounded:before {
+	   border-width: 8px;
+	   border-color: #fff #fff transparent transparent;
+	   -moz-border-radius: 0 0 0 5px;
+	   border-radius: 0 0 0 5px;
+       }
+
+       .note header {
+	   font-size: 175%;
+	   text-decoration: underline;
+       }
+       img.profile {
+	   border-radius: 30%;
+	   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+	   -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+	   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+       }
+
+       ul li a img {height: 1.5em;}
+
+       pre {
+           background: #303030;
+           color: #f1f1f1;
+           padding: 10px 16px;
+           border-radius: 2px;
+           border-top: 4px solid #5895fc;
+	   border-bottom: 4px solid #5895fc;
+           -moz-box-shadow: inset 0 0 10px #000;
+           box-shadow: inset 0 0 10px #000;
+           counter-reset: line;
+       }
+       
+       pre span {
+           display: block;
+           line-height: 1.5rem;
+       }
+       pre span:before {
+           counter-increment: line;
+           content: counter(line);
+           display: inline-block;
+           border-right: 1px solid #ddd;
+           padding: 0 .5em;
+           margin-right: .5em;
+           color: #888
+       }
+
+       hr {
+	   border: 3px solid #f9c7fc;
+	   border-radius: 5px;
+       }
+    </style>
+    
+  </head>
+  <body>
+
+    <header>
+      <h1>Eduardo José Gómez Hernández</h1>
+      <nav class="menu">
+	<ul>
+	  <li><a href="index.html">Biography</a></li>
+	  <li><a href="research.html">Research</a></li>
+	  <li><a href="education.html">Education and Experience</a></li>
+	  <li><a href="teaching.html">Teaching</a></li>
+	  <li><a href="reviewer.html">Reviewer</a></li>
+	  <li><a href="tools.html">Tools</a></li>
+	  <li><a href="news.html">News</a></li>
+	  <li><a class="active" href="#">Blog</a></li>
+	</ul>
+      </nav>
+    </header>
+
+    <br>
+    
+    This blog section is published in <a href="https://cohost.org/OdnetninI">cohost</a>.
+    <br>
+    However, I am keeping a copy here :)
+    <br>
+
+    <h2>by Topic</h2>
+    <ul>
+      <li> Splash-4
+	<ul>
+	  <li><a href="#splash4-1">SPLASH-4 Article #1: Introduction - Road to Splash-4.1</a></li>
+	  <li><a href="#splash4-2">SPLASH-4 Article #2: FFT extra barriers and prefetch</a></li>
+	  <li><a href="#splash4-3">SPLASH-4 Article #3: CLOCK is not enough to measure time</a></li>
+	  <li><a href="#splash4-4">SPLASH-4 Article #4: Old-style data types</a></li>
+	</ul>
+      </li>
+      <li> Random
+	<ul>
+	  <li><a href="#welcome">Welcome!!</a></li>
+	</ul>
+      </li>
+    </ul>
+
+    <hr>
+
+    <h2>by Date</h2>
+    <h3>2023</h3>
+    <ul>
+      <li>May
+	<ul>
+	  <li><a href="#splash4-4">SPLASH-4 Article #4: Old-style data types</a></li>
+	</ul>
+      </li>
+      <li>April
+	<ul>
+	  <li><a href="#splash4-3">SPLASH-4 Article #3: CLOCK is not enough to measure time</a></li>
+	  <li><a href="#splash4-2">SPLASH-4 Article #2: FFT extra barriers and prefetch</a></li>
+	</ul>
+      </li>
+      <li>February
+	<ul>
+	  <li><a href="#splash4-1">SPLASH-4 Article #1: Introduction - Road to Splash-4.1</a></li>
+	  <li><a href="#welcome">Welcome!!</a>
+	</ul>
+      </li>
+    </ul>
+
+    <hr>
+
+    <div class="blogpost" id="splash4-4">
+      <h2>SPLASH-4 Article #4: Old-style data types</h2>
+      <p>Welcome to the next Splash-4.1 article.<br>
+Sorry for not writing in a while, but I am preparing a lot of things, so I did not have too much free time.</p>
+
+      <p>Before the standardization of C built-in types in C99, it was very common to have large sections declaring types from the built-in ones:</p>
+
+      <pre><code>// Extracted from raytrace
+
+typedef 	char			CHAR;
+typedef 	char			S8;
+typedef 	unsigned char		UCHAR;
+typedef 	unsigned char		U8;
+
+typedef 	short			SHORT;
+typedef 	short			S16;
+typedef 	unsigned short		USHORT;
+typedef 	unsigned short		U16;
+
+typedef 	long			INT;
+typedef 	unsigned long		UINT;
+typedef 	unsigned long		BOOL;
+
+typedef 	long			LONG;
+typedef 	long			S32;
+typedef 	unsigned long		ULONG;
+typedef 	unsigned long		U32;
+
+typedef 	float			FLOAT;
+typedef 	float			R32;
+typedef 	double			DOUBLE;
+typedef 	double			R64;
+typedef 	double			REAL;</code></pre>
+
+      <p>In these cases, we have several possible solutions. The first one is to fix those typedefs with the right data type, which is the easiest solution. However, even being more time-consuming, it is better to use the correct data types in the code and remove the typedefs completely.</p>
+
+<p>It is easy to think, that just a replacement in the full code with solve the issue. This is far from the truth.</p>
+
+<p>Now, it is important to check all the uses of those types and replace some of them with better alternatives. For example, some variables can only be positive, so no need for them to be signed. Other variables can use fewer bits. There is a full set of changes that can be applied to optimize not only memory usage but also CPU usage.</p>
+
+<p>Let me include an honorable mention, <code>"bool"</code>. In the past, the boolean type was not implemented in the standard, so most people used unsigned/signed 8-bit variables to implement them, which helped with macros. Sometimes, longer types, and other types even without macros. But nowadays, the <code>"stdbool"</code> header solves this issue. However, even today, there are reasons why some programmers prefer avoiding the <code>"bool"</code> type, but this is a story for another time.</p>
+
+<p>Nowadays, typedef is used for reducing the size of data type names (from <code>"struct MyType"</code> to <code>"MyType"</code>), giving more meaningful names (from <code>"unsigned int"</code> to <code>"Index"</code> or <code>"index_t"</code>), and when the data is meant to be changed by the user (from <code>"float"</code> to <code>"Element_Type"</code>).</p>
+
+<p>In the end, to conclude, this is a programmer's decision. But reasons to use typedefs have changed due to standardization, language evolution, and also other languages and programmers' influence. Everything evolves.</p>
+
+<p>Best Regards, OdnetninI</p>
+    </div>
+
+    <hr>
+
+    <div class="blogpost" id="splash4-3">
+      <h2>SPLASH-4 Article #3: CLOCK is not enough to measure time</h2>
+      <p>Hello again, folks 👋,</p>
+
+      <p>I got another request in my email asking if I had any clue why the benchmarks were reporting <code>"0"</code> or <code>"nan"</code> execution times.</p>
+
+      <p>I also noticed it, but never care about it as all my measures were done using the ROI with my custom code.</p>
+
+      <p>But, if I want to enable more people to use the Splash-4 benchmarks as a replacement for Splash-2, Splash-2X, or Splash-3, I have to fix these issues. Note that in Splash-4.1, these statistics will not exist as the synchronization point is slower than the code itself. I am still thinking of a way of solving this question.</p>
+
+      <p>Going back to the issue mentioned in the email. Why is the timer reporting <code>"0"</code> or <code>"nan"</code>?</p>
+
+      <p>Well <code>"nan"</code> could appear when there is a by zero division. So let's check if this is the case.</p>
+
+      <pre><code>CLOCK(initdone);
+...
+CLOCK(finish);
+...
+Global->totaltimes[MyNum] = finish-initdone;
+...
+((double)Global->transtimes[0])/Global->totaltimes[0]</code></pre>
+      
+      <p>So, let's check how the CLOCK macro works</p>
+
+      <pre><code>m4_define(CLOCK, `{long time(); ($1) = time(0);}')</code></pre>
+      
+      <p>The <code>"time()"</code> C call, as mentioned in the man 2 page:</p>
+      
+      <p><code>time() returns the time as the number of seconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC).</code></p>
+      
+      <p>So, the problem is easy to understand, the measured parts take less than 1 second to execute. And when the measure is done just at the border of two seconds, instead of <code>"nan"</code>, the benchmarks spill out <code>"0"</code>.</p>
+      
+      <p>The main problem in solving this is that the variables, for measuring time, are 32 bits in most of the benchmarks. Therefore, in the future, this will be again an issue, but meanwhile, I find a better solution, I replaced the CLOCK macro with this one, that has a high-res timer.</p>
+
+      <pre><code>m4_define(CLOCK, `{
+  struct timeval FullTime;
+  gettimeofday(&FullTime, NULL);
+  ($1) = (unsigned long)(FullTime.tv_usec + FullTime.tv_sec * 1000000);
+}')</code></pre>
+
+      <p>I cannot point out the exact moment, but in Splash-2 I found both versions of the CLOCK macro, depending on the specific repository I look at. Also, in Splash-3 the problematic CLOCK macro is used.</p>
+
+      <p>After some testing, I declare the issue solved, for now.</p>
+      
+      <p>Best Regards, OdnetninI</p>
+    </div>
+
+    <hr>
+
+    <div class="blogpost" id="splash4-2">
+      <h2>SPLASH-4 Article #2: FFT extra barriers and prefetch</h2>
+      <p>Hello everyone 👋</p>
+
+      <p>Since I started developing Splash-4, I noticed that, more commonly the kernel apps, there are several synchronization points that are not needed at all.</p>
+      
+      <p>After receiving an email asking about why some of the barriers were there, as they seem to be doing nothing, I started looking into them again.</p>
+      
+      <p>One of the first things I noticed is that nearly half of the barriers in FFT were there just to be able to measure the time between different execution parts. However, in nowadays hardware and designs, these benchmarks execute extremely fast, this synchronization overhead is no longer insignificant.</p>
+      
+      <pre><code>BARRIER(Global->start, P);
+
+if ((MyNum == 0) || (dostats)) {
+	CLOCK(clocktime1);
+  printf("Step 2: %8lu\n", clocktime1-clocktime2);
+}</code></pre>
+      
+      <p>Therefore, after a deep analysis of which parts use data from other cores and when it is using its data, only three Barriers are required (four if reverse FFT is enabled to check the results). That is a great reduction from the original seven mandatory barriers.</p>
+
+      <p>Apart from the barriers, before starting computing, each thread tries to prefetch its data using:</p>
+      
+      <pre><code>TouchArray(x, trans, umain2, upriv, MyFirst, MyLast);</code></pre>
+
+      <p>After doing some experiments on three different machines, I noticed that this "prefetch" was slowing down the application a little bit in some cases.</p>
+
+      <p>Prefetching could be important in specific architectures, which is why I decided to make it optional using the -y argument when executing the application.</p>
+
+      <p>I know this time there are no fancy graphs, but I hope to see you next time ☺</p>
+      
+      <p>Best Regards, OdnetninI</p>
+    </div>
+
+    <hr>
+
+    <div class="blogpost" id="splash4-1">
+      <h2>SPLASH-4 Article #1: Introduction - Road to Splash-4.1</h2>
+
+      <img src="blog/splash4-1-img.webp" alt="Performance difference between Splash-3, Splash-3 with Atomics, Splash-3 with sense reversing Barriers and Splash-4">
+      
+      <p>Hello everyone 👋</p>
+
+      <p>Several months ago, my research group and I released The Splash-4 Benchmark Suite. Published in IISWC2022 <code>"10.1109/IISWC55918.2022.00015"</code> and available in GitHub <a href="https://github.com/OdnetninI/Splash-4" target="_blank">https://github.com/OdnetninI/Splash-4</a></p>
+
+      <p>This release was a big update on those very old benchmarks (over 25 years old), significantly reducing the synchronization overhead of running the benchmarks, reducing the execution time and increasing the performance of the applications.</p>
+
+      <p>However, even after 3 updates, no one has invested enough time into the applications to modernize the code to today's standards.</p>
+
+      <p>To begin, because most of the benchmarks were written in the early 90s, they follow very old C programming style. As an example, all the variables of a function are defined at the beginning. Creating a lot of lines that are not relevant at that moment when trying to understand the code.</p>
+      
+      <p>During the development of the Splash (or probably Splash-2), the authors introduced the M4 macro system. M4 has several good features, it is much more evolved than the C preprocessor, but it has some several drawbacks. When using an external macro system, matching compiler errors with original source files is not trivial, this is the reason why the C preprocessor introduces several <code>"#line"</code> sentences after the preprocessor executes. Another drawback is that M4 uses positional arguments for the macros, and never checks the number of parameters.</p>
+      
+      <p>Therefore, the main goal of Splash-4.1 is to modernize the source code to make them easier to read, removing external dependencies (like the M4 macro processor) and fix several bugs, remove synchronization overheads that are not needed. All these changes will allow future researchers to understand and modify the benchmarks as they need, without the hassle of reading near 30 years old code.</p>
+      
+      <p>In the following articles, I plan to show some of the steps done, and the reason behind them.</p>
+      
+      <p>So, I hope to see you around in the following post ☺</p>
+      
+      <p>Best Regards, OdnetninI</p>
+    </div>
+
+    <hr>
+    
+    <div class="blogpost" id="welcome">
+      <h2>Welcome!!</h2>
+
+      <img src="blog/splash4-1-img.webp" alt="Performance difference between Splash-3, Splash-3 with Atomics, Splash-3 with sense reversing Barriers and Splash-4">
+      
+      <p>Hi everyone 😃,</p>
+
+      <p>I am OdnetninI (aka. Odi, Odnet or Eduardo) a Ph.D. Student at the University of Murcia. I plan to post several series of articles focused on different topics I encounter in my research career (sometimes also my life). Hope to see you soon 👋</p>
+
+      <p>Best Regards, OdnetninI</p>
+    </div>
+    
+  </body>
+</html>
