@@ -166,6 +166,11 @@
 
     <h2>by Topic</h2>
     <ul>
+      <li> TheZZAZZGlitch's April Fools Event
+	<ul>
+	  <li><a href="#zzazz23-comp">Finally!!! I have implemented something very close to a compiler</a></li>
+	</ul>
+      </li>
       <li> Splash-4
 	<ul>
 	  <li><a href="#splash4-1">SPLASH-4 Article #1: Introduction - Road to Splash-4.1</a></li>
@@ -188,6 +193,7 @@
     <ul>
       <li>May
 	<ul>
+	  <li><a href="#zzazz23-comp">Finally!!! I have implemented something very close to a compiler</a></li>
 	  <li><a href="#splash4-4">SPLASH-4 Article #4: Old-style data types</a></li>
 	</ul>
       </li>
@@ -204,6 +210,59 @@
 	</ul>
       </li>
     </ul>
+
+    <hr>
+
+    <div class="blogpost" id="zzazz23-comp">
+      <h2>Finally!!! I have implemented something very close to a compiler</h2>
+      <p>I am still preparing two posts for explaning why I did this, but as they are not yet ready, let me give you a very small summary:</p>
+
+      <p>Every year, the Youtuber "TheZZAZZGlitch" (a.k.a. zzazz) creates a challenge named "<code>TheZZAZZGlitch's April Fools Event</code>". Typicaly this event is run Gameboy or Gameboy Advance with some unmodified Pokemon ROM and a custom Save file. There is an exploration part, where everyone without technical knowledge can play and solved without any issue. But, there is also a secondary part which includes the understanding of several topics: Reverse Engineering, Networking, Assembly (LR35902, ARM), Quick prototyping, among many others. I've been participating since 2017 each year, most of them teamed with by friend Radixan.</p>
+
+      <p>However, this year was special, zzazz did not have enough time to prepare a full challenge, they got a new job in Microsoft and they is preparing cybersecurity conferences, so they did an more Capture The Flag challenge (CTF). This time, there was an invented 16-architecture that has its own instructions, applications, environment...</p>
+      
+      <p>Okay, but how a compiler is related with a CTF challenge?</p>
+      
+      <p>Well, after the challenge finished, we were waiting for zzazz to release the source code of the challenge, like they usually do. But there was no luck, only the leaderboard got released.</p>
+      
+      <p>So, I did my own. I have implemented 99% of the challenge. I will not enter in details, as I am detailing everything in another post, but in summary, there are some information missing that we were not able to recover before the challenge server died. However, it is possible to emulate enought of it to make the Flag available.</p>
+      
+      <p>The point was, that, during the development of the replica of the challenge, I wanted to have some tools to Assemble and Disassemble the binaries of the challenge.</p>
+      
+      <p>The Disassembler was easy, we already done it during the challenge itself, it required some tinkering and refactorization, but it worked. The main issue was the Assember. I didn't want just a simple assembler that process line by line, I wanted to have labels, constants, string reallocation, expressions... Just some things that make life easier for developers.</p>
+      
+      <p>As the challenge did not have an specific assembly language, I invented my own, based on x86, ARM, Z80, 6202, ... everything I already know.</p>
+      
+      <p>I splited the challenge of making the assembler in two steps:
+	<ul>
+	  <li>Make an small dirtier version that just works, even if instructions need to change to make my life easier (like "<code>movi</code>" instead of the generic "<code>mov</code>" to indicate that we are using a number instead of a register).</li>
+	  <li>When it works, refine the assembly language and create an assembler that has at least 4 modules: Lex, Grammar, Code, Symbols.</li>
+	</ul>
+      </p>
+      
+      <p>The first version, was a nightmare, a lot of small tricks, and hardcoded things to make it work. But it did :) This assembler:
+	<ul>
+	  <li><a href="https://github.com/OdnetninI/zzazz-2023-server/blob/e36cdcb5914540a29fc3363883eb513ecbe73376/tools/assember/src/assembler.c" target="_blank">https://github.com/OdnetninI/zzazz-2023-server/blob/e36cdcb5914540a29fc3363883eb513ecbe73376/tools/assember/src/assembler.c</a></li>
+	  Was able to compile this program:
+	  <li><a href="https://github.com/OdnetninI/zzazz-2023-server/blob/e36cdcb5914540a29fc3363883eb513ecbe73376/tools/assember/13337.boot.asm" target="_blank">https://github.com/OdnetninI/zzazz-2023-server/blob/e36cdcb5914540a29fc3363883eb513ecbe73376/tools/assember/13337.boot.asm</a></li>
+          It worked
+	</ul>
+      </p>
+      
+      <p>The second version, was a bit better (<a href="https://github.com/OdnetninI/zzazz-2023-server/tree/main/tools/assember" target="_blank">https://github.com/OdnetninI/zzazz-2023-server/tree/main/tools/assember</a>), however, some things are still done for quicker development. For example, the code does not differentiate between "<code>call</code>" and "<code>caZZ</code>", it just assume that if it starts with letter 'c' then an 'a' follows it, and it is 4 characters long, it is "<code>call</code>".</p>
+      
+      <p>But, after finishing some parts, adding more stuff, refining things, creating the symbol tables, allocating space, resolving symbols, doing the grammar maching... it end up being a compiler, a very simple one.</p>
+      
+      <p>It is full of bugs, things that can be improved, better decissions could be done, but in the end, it works. I have tried so many times to implement a compiler, even during the Bachelor's I had a subject about it, but this is the first time I was able to implement something that works, done completely by myself and I am proud of it.</p>
+
+      <p>For some of you, this could be nothing, but for me, it was huge.</p>
+      
+      <p>Please, check the code, and feel free to submit your improvements. The only requirement is that the already existing "<code>.asm</code>" files generate binary identical files to the challenge ones. I have some improvements in mind, but I need motivation to implement them.</p>
+      
+      <p>This is all for this time.</p>
+    
+      <p>Best Regards, OdnetninI</p>
+    </div>
 
     <hr>
 
