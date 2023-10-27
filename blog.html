@@ -160,9 +160,7 @@
 
     <br>
     
-    This blog section is published in <a href="https://cohost.org/OdnetninI">cohost</a>.
-    <br>
-    However, I am keeping a copy here :)
+    This is blog is no longer a mirror. It is now the main location of the blog :)
     <br>
 
     <h2>by Topic</h2>
@@ -178,6 +176,7 @@
 	  <li><a href="#splash4-2">SPLASH-4 Article #2: FFT extra barriers and prefetch</a></li>
 	  <li><a href="#splash4-3">SPLASH-4 Article #3: CLOCK is not enough to measure time</a></li>
 	  <li><a href="#splash4-4">SPLASH-4 Article #4: Old-style data types</a></li>
+	  <li><a href="#splash4-5">SPLASH-4 Article #5: A special version Released - Splash-4.0.1</a></li>
 	</ul>
       </li>
       <li> Random
@@ -192,6 +191,11 @@
     <h2>by Date</h2>
     <h3>2023</h3>
     <ul>
+      <li>October
+	<ul>
+	  <li><a href="#splash4-5">SPLASH-4 Article #5: A special version Released - Splash-4.0.1</a></li>
+	</ul>
+      </li>
       <li>May
 	<ul>
 	  <li><a href="#zzazz23-comp">Finally!!! I have implemented something very close to a compiler</a></li>
@@ -211,6 +215,51 @@
 	</ul>
       </li>
     </ul>
+
+    <hr>
+
+    <div class="blogpost" id="splash4-5">
+      <h2>SPLASH-4 Article #5: A special version Release - Splash-4.0.1</h2>
+      <p>After so long, a new article is out :)<br>
+
+      <p>During the development of another different project, a question arose about the last Lock that remains in Volrend. So, we decided to tackle it, and if necessary, build another version if the results are relevant enough.</p>
+      
+      <p>The critical section is the following one:</p>
+
+      <pre><code>    LOCK(Global->CountLock);
+    printf("%3ld\t%3ld\t%6ld\t%6ld\t%6ld\t%6ld\t%8ld\n",my_node,frame,exectime,
+	   exectime1,num_rays_traced,num_traced_rays_hit_volume,
+	   num_samples_trilirped);
+    UNLOCK(Global->CountLock);</code></pre>
+      
+      <p>This section is used to print the progress of the application. Its output can be used to determine if the application ran successfully, however, because the order was random, the output was never used for this purpose and instead, the output tiff was used.</p>
+      
+      <p>The new version moves this data to a shared structure and it is later print by thread 0, without the need for an extra synchronization (there was already a barrier after the code mentioned above.</p>
+
+      <pre><code>    Global->progress[my_node].frame = frame;
+    Global->progress[my_node].exectime = exectime;
+    Global->progress[my_node].exectime1 = exectime1;
+    Global->progress[my_node].num_rays_traced = num_rays_traced;
+    Global->progress[my_node].num_traced_rays_hit_volume = num_traced_rays_hit_volume;
+    Global->progress[my_node].num_samples_trilirped = num_samples_trilirped;</code></pre>
+      
+      <p>This new version is named "<code>Volrend No Print Lock</code>".</p>
+
+      <p>With this last change, we announce the new version Splash-4.0.1:</p>
+
+      <p>25 - October -2023: Release Splash-4.0.1
+	<ul>
+<li>NEW: A new version for Volrend, Volrend-no_print_lock. The progress printing lock at adaptative.c.in have been replaced with a memory location. After the barrier sync, thread 0 prints all the progress in order.<br>
+    Besides the reduction in unnecessary synchronization, the output is always in thread+frame order.</li>
+<li>FIX: The CLOCK macro has been replaced with a high-res, more info at issue #2</li>
+<li>MINI: SPLASH3_ROI_BEGINand SPLASH3_ROI_END have been replaced with SPLASH4_ROI_BEGIN and SPLASH4_ROI_END</li>
+    </ul>
+      </p>
+
+      <p>Remember, the new version is available at the repository: <a href="https://github.com/OdnetninI/Splash-4" target="_blank">https://github.com/OdnetninI/Splash-4</a>
+	
+      <p>Best Regards, OdnetninI</p>
+    </div>
 
     <hr>
 
