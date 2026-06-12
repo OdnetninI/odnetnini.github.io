@@ -187,6 +187,7 @@
       </li>
       <li> Random
 	<ul>
+	  <li><a href="#code1">C Programming Safety - 1</a></li>
 	  <li><a href="#welcome">Welcome!!</a></li>
 	</ul>
       </li>
@@ -195,6 +196,13 @@
     <hr>
 
     <h2>by Date</h2>
+  <h3>2026</h3>
+    <ul>
+      <li>June
+	<ul>
+	  <li><a href="#code1">C Programming Safety - 1</a></li>
+	</ul>
+	</ul>
     <h3>2025</h3>
     <ul>
       <li>July
@@ -228,6 +236,78 @@
 	</ul>
       </li>
     </ul>
+
+    <hr>
+
+    <div class="blogpost" id="code1">
+      <h2>C Programming Safety - 1</h2>
+      <p>Hallo! It has been a long time since the last one.</p>
+
+  <p>Things are going good, thanks for asking :) I am having a lot of learning and new experiences. Probably like everywhere else, I have better days, but also worse days. A lot of new adventures are in progress. Unfortunately, I cannot enter in details :(</p>
+
+  <p>This time, I wanted to discuss on a topic that sometimes heats me a little. Programming safety on C.</p>
+
+  <p>Nowadays with Rust and AI programming, most of people forgets to understand what they are doing. Let me bring the example I have discussed with some friends last week.</p>
+  
+  <pre><code>
+    void copy_from_user (int* data, size_t items) {
+      int* temp = malloc(items * sizeof(int));
+      for (size_t i = 0; i < items; ++i)
+        temp[i] = data[i];
+
+      // Use Temp
+      free(temp);
+    }
+  </code></pre>
+
+  <p>The above piece of code is non-secure, as depending on the input parametters, a user can force an out of bounds read and/or write. However, the main focus of the discussion was on the <code>malloc</code> function.</p>
+
+  <p><code>malloc</code>, receives a <code>size_t</code> argument, so there is no issue there. But we are multiplying the argument <code>items</code> by <code>sizeof(int)</code>. If <code>items</code> is very close to <code>SIZE_MAX</code>, then <code>malloc</code> will allocate a small buffer and the for loop will go out of bounds.</p>
+
+  <p>This is one of the hate given to C, while the problem here is the programmer, not the language.</p>
+
+  <p>In cybersecurity for critical systems, every single instance where a variable depends on the user, it has to be verified before running any single operation on it. This is called, <b>Input Validation</b>, and it is standard in the industry, and for every programming language.</p>
+
+  <p>This is how I would programm the same function to be <b>Safer</b> in a modern Operating System (not embeded here).</p>
+
+  <pre><code>
+    __attribute__((noreturn)) void handle_error(void);
+
+    void copy_from_user (int* data, size_t items) {
+      // Basic Input Validation
+      if (data == NULL) {
+        handle_error();
+        __builtin_unreachable();
+      }
+
+      if (items >= (SIZE_MAX / sizeof(int))) {
+        handle_error();
+        __builtin_unreachable();
+      }
+
+      int* temp = (int*)malloc(items * sizeof(int));
+      // Validate malloc
+      if (temp == NULL || temp == (int*)-1UL) {
+        handle_error();
+        __builtin_unreachable();
+      }
+      
+      for (size_t i = 0; i < items; ++i)
+        temp[i] = data[i];
+
+      // Use Temp
+      free(temp);
+    }
+  </code></pre>
+
+  <p>This new version, solves most of the typical attacks. Extra checks can be added to make sure data is on user accessible memory and not internal memory, or even making sure the buffer and the numbers of items the user is passing is correct (depends on the data structure expected).</p>
+
+  <p>In the end, the learning I want to give is, don't blame the language, it is a just a tool. The problem is programmers not being aware of the underlying behavior of the tools and systems they are developing on/for.</p>
+
+  <p>With all of this, thank you so much for your time :)</p>
+
+      <p>Best Regards, OdnetninI</p>
+    </div>
 
     <hr>
 
